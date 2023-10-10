@@ -12,21 +12,21 @@ if(isNaN(kilometri) || isNaN(eta)){
 if (eta <= 17) {
     prezzoTot = prezzoTot -(prezzoTot * 20 / 100);
     prezzoScon.innerHTML=`
-        il costo del tuo biglietto è ${prezzoTot};
+        il costo del tuo biglietto è ${prezzoTot.toFixed(2)};
     
     `  
     console.log(prezzoTot);
     
 } else if (eta >= 65){
-    prezzoScon =  prezzoTot -(prezzoTot * 40 / 100);
+    prezzoTot =  prezzoTot -(prezzoTot * 40 / 100);
     prezzoScon.innerHTML=`
-        il costo del tuo biglietto è ${''} ${prezzoTot}
+        il costo del tuo biglietto è ${''} ${prezzoTot.toFixed(2)}
     
     `  
     console.log(prezzoTot);
 } else{
     prezzoScon.innerHTML=`
-        il costo del tuo biglietto è ${''} ${prezzoTot}
+        il costo del tuo biglietto è ${''} ${prezzoTot.toFixed(2)}
     
     ` 
 }
